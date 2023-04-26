@@ -1,0 +1,42 @@
+{
+  "name": "visual-studio-themes",
+  "displayName": "Visual Studio Default Themes",
+  "description": "Default themes used in Visual Studio",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "publisher": "ShayanAhmedKhan",
+  "author": {
+    "name": "Shayan Ahmed Khan"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "visual studio",
+    "visual studio 2022",
+    "visual studio color theme",
+    "visual studio 2022 color theme",
+    "visual studio themes",
+    "visual studio 2022 themes",
+    "visual studio default themes",
+    "visual studio 2022 default themes"
+  ],
+  "icon": "icon.png",
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "dark (Visual Studio)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-vs-color-theme.json"
+      }
+    ]
+  }
+}
+
