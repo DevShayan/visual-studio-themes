@@ -1,6 +1,6 @@
 # Visual Studio default themes
 
-Visual Studio default themes contain one basic theme, dark.
+Visual Studio default themes contain two basic themes, Dark and Blue.
 
 ## Supported Languages
 
@@ -13,14 +13,21 @@ Visual Studio default themes contain one basic theme, dark.
 ## Applying theme
 
 ### To apply theme:
-* Ctrl+Shift+P -> Preferences: Color Theme -> dark (Visual Studio)
+* Ctrl+Shift+P -> Preferences: Color Theme -> Dark (Visual Studio 2022)
+* Ctrl+Shift+P -> Preferences: Color Theme -> Blue (Visual Studio 2022)
 ---
 
 ## Preview
 
-* Dark (Visual Studio)
+* Dark (Visual Studio 2022)
 
-![dark theme preview](preview/preview_dark_vs.png)
+![dark theme preview](preview/preview_dark_vs.jpg)
+<br>
+---
+
+* Blue (Visual Studio 2022)
+
+![dark theme preview](preview/preview_blue_vs.jpg)
 <br>
 ---
 

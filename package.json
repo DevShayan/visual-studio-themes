@@ -1,7 +1,7 @@
 {
   "name": "visual-studio-themes",
   "displayName": "Visual Studio Default Themes",
-  "description": "Default themes used in Visual Studio",
+  "description": "Default themes used in Visual Studio 2022",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.0.0"
@@ -32,9 +32,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "dark (Visual Studio)",
+        "label": "Dark (Visual Studio 2022)",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-vs-color-theme.json"
+      },
+      {
+        "label": "Blue (Visual Studio 2022)",
+        "uiTheme": "vs",
+        "path": "./themes/blue-vs-color-theme.json"
       }
     ]
   }
