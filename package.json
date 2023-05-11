@@ -2,7 +2,7 @@
   "name": "visual-studio-themes",
   "displayName": "Visual Studio Default Themes",
   "description": "Default themes used in Visual Studio 2022",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.0.0"
   },
