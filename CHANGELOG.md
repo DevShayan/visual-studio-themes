@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.2 - 05-12-2023]
+
+#### Changed
+- Fixed button foreground colors
+
 ## [0.1.1 - 05-11-2023]
 
 #### Changed

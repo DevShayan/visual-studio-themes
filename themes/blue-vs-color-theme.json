@@ -42,6 +42,7 @@
 		"button.hoverBackground": "#c4d5ff",
 		"button.secondaryHoverBackground": "#c4d5ff",
 		"button.foreground": "#000000",
+		"button.secondaryForeground": "#000000",
 		"button.border": "#8591a2",
 		"extensionButton.background": "#dddddd",
 		"extensionButton.prominentForeground": "#000000",
