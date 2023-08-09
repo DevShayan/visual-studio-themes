@@ -1,30 +1,38 @@
 {
 	"name": "blue VS",
 	"type": "light",
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		// "field": "#00ff00"
+	},
 	"colors": {
 		"editor.background": "#ffffff",
 		"editor.foreground": "#000000",
 		"focusBorder": "#f5cc84",
+		"foreground": "#1e1e1e",
 		"editor.lineHighlightBackground": "#00000000",
 		"editor.lineHighlightBorder": "#eaeaf2",
 		"editorLineNumber.foreground": "#7a7a7a",
 		"editorLineNumber.activeForeground": "#000000",
-		"editorIndentGuide.background": "#d0d0d0",
-		"editorIndentGuide.activeBackground": "#d0d0d0",
+		"editorIndentGuide.background1": "#d0d0d0",
+		"editorIndentGuide.activeBackground1": "#d0d0d0",
 		"editorBracketMatch.background": "#e2e6d6",
 		"editorBracketMatch.border": "#00000000",
-		"editorBracketHighlight.foreground1": "#000000",
-		"editorBracketHighlight.foreground2": "#000000",
-		"editorBracketHighlight.foreground3": "#000000",
-		"editorBracketHighlight.foreground4": "#000000",
-		"editorBracketHighlight.foreground5": "#000000",
-		"editorBracketHighlight.foreground6": "#000000",
+		// "editorBracketHighlight.foreground1": "#000000",
+		// "editorBracketHighlight.foreground2": "#000000",
+		// "editorBracketHighlight.foreground3": "#000000",
+		// "editorBracketHighlight.foreground4": "#000000",
+		// "editorBracketHighlight.foreground5": "#000000",
+		// "editorBracketHighlight.foreground6": "#000000",
 		"editor.selectionBackground": "#99c9ef",
 		"editor.inactiveSelectionBackground": "#e5ebf1",
 		"editor.selectionHighlightBackground": "#e0e1de",
 		"editor.wordHighlightBackground": "#e2e6d6",
 		"editor.foldBackground": "#00000000",
 		"editorGutter.foldingControlForeground": "#555555",
+		"editorGutter.addedBackground": "#107c10",
+		"editorGutter.modifiedBackground": "#0078d4",
+		"editorGutter.deletedBackground": "#df6262",
 		"editorWidget.background": "#e9eeff",
 		"editorSuggestWidget.background": "#f7f9fe",
 		"editorSuggestWidget.highlightForeground": "#1e1e1e",
@@ -47,6 +55,14 @@
 		"extensionButton.background": "#dddddd",
 		"extensionButton.prominentForeground": "#000000",
 		"extensionButton.hoverBackground": "#bee6fd",
+		"gitDecoration.addedResourceForeground": "#1e1e1e",
+		"gitDecoration.untrackedResourceForeground": "#1e1e1e",
+		"gitDecoration.modifiedResourceForeground": "#1e1e1e",
+		"gitDecoration.deletedResourceForeground": "#1e1e1e",
+		"gitDecoration.renamedResourceForeground": "#1e1e1e",
+		"gitDecoration.stageDeletedResourceForeground": "#1e1e1e",
+		"gitDecoration.stageModifiedResourceForeground": "#1e1e1e",
+		"gitDecoration.submoduleResourceForeground": "#1e1e1e",
 		"icon.foreground": "#cccccc",
 		"input.background": "#fcfcfc",
 		"input.border": "#203d77",
@@ -55,6 +71,7 @@
 		"list.activeSelectionBackground": "#c4d5ff",
 		"list.focusAndSelectionOutline": "#203d77",
 		"list.activeSelectionForeground": "#1e1e1e",
+		"list.errorForeground": "#1e1e1e",
 		"sideBar.background": "#f7f9fe",
 		"sideBar.border": "#5d6b99",
 		"sideBarSectionHeader.background": "#40568d",
@@ -105,18 +122,26 @@
 			}
 		},
 		{
-			"name": "Keyword, Storage, language constants, null, builtin function, Annotation, magic function",
+			"name": "Keyword, delete, builtin function",
 			"scope": [
 				"keyword",
 				"keyword.operator.instanceof",
 				"variable.language",
+				"support.function.builtin"
+			],
+			"settings": {
+				"foreground": "#8f08c4"
+			}
+		},
+		{
+			"name": "Storage, language constants",
+			"scope": [
 				"storage",
+				"keyword.other",
+				"keyword.operator.new",
+				"keyword.operator.delete",
+				"keyword.type.cs",
 				"constant.language",
-				"constant.language.NULL",
-				"support.function.builtin",
-				"storage.type.annotation",
-				"punctuation.definition.annotation",
-				"support.function.magic"
 			],
 			"settings": {
 				"foreground": "#0000ff"
@@ -132,11 +157,18 @@
 			}
 		},
 		{
-			"name": "Classes, Namespaces",
+			"name": "Escape sequence",
 			"scope": [
-				"entity.name.type.class",
-				"entity.name.type.struct",
-				"entity.name.scope-resolution"
+				"constant.character.escape"
+			],
+			"settings": {
+				"foreground": "#b776fb"
+			}
+		},
+		{
+			"name": "Classes, Namespaces, T",
+			"scope": [
+				"entity.name.type",
 			],
 			"settings": {
 				"foreground": "#2b91af"
@@ -177,6 +209,16 @@
 			}
 		},
 		{
+			"name": "C++: String punctuation",
+			"scope": [
+				"punctuation.definition.string.begin.cpp",
+				"punctuation.definition.string.end.cpp",
+			],
+			"settings": {
+				"foreground": "#e21f1f"
+			}
+		},
+		{
 			"name": "C++: directives",
 			"scope": [
 				"keyword.control.directive",
@@ -186,18 +228,44 @@
 			}
 		},
 		{
-			"name": "C++: function, preprocessor function, constructor, template type, namespaces",
+			"name": "C++: function, constructor",
 			"scope": [
 				"entity.name.function.definition.cpp",
 				"entity.name.function.call.cpp",
 				"entity.name.function.member.cpp",
 				"entity.name.function.constructor.cpp",
-				"entity.name.function.preprocessor",
-				"entity.name.type.template",
-				"entity.name.namespace"
 			],
 			"settings": {
-				"foreground": "#2b91af"
+				"foreground": "#74531f"
+			}
+		},
+		{
+			"name": "C++: parameter variable",
+			"scope": [
+				"variable.parameter.cpp",
+			],
+			"settings": {
+				"foreground": "#808080"
+			}
+		},
+		{
+			"name": "C++: local variable",
+			"scope": [
+				"variable.other.local"
+			],
+			"settings": {
+				"foreground": "#1f377f"
+			}
+		},
+		{
+			"name": "C++: preprocessor token, NULL, conditional token",
+			"scope": [
+				"meta.preprocessor.macro",
+				"constant.language.NULL",
+				"entity.name.other.preprocessor.macro.predefined"
+			],
+			"settings": {
+				"foreground": "#8a1bff"
 			}
 		},
 		{
@@ -377,7 +445,54 @@
 			"settings": {
 				"foreground": "#000000"
 			}
-		}
+		},
+		{
+			"name": "C#: functions",
+			"scope": [
+				"entity.name.function.cs"
+			],
+			"settings": {
+				"foreground": "#74531f"
+			}
+		},
+		{
+			"name": "C#: local & parameter variable",
+			"scope": [
+				"entity.name.variable.parameter.cs",
+				"entity.name.variable.local.cs"
+			],
+			"settings": {
+				"foreground": "#1f377f"
+			}
+		},
+		{
+			"name": "C#: Class attributes (variables)",		// temporary fix (wrong color for accessing class attributes)
+			"scope": [
+				"variable.other.readwrite.cs",
+			],
+			"settings": {
+				"foreground": "#1f377f"
+			}
+		},
+		{
+			"name": "C#: Object variables (variables)",		// temporary fix (wrong color for static class names e.g "Console")
+			"scope": [
+				"variable.other.object.cs",
+			],
+			"settings": {
+				"foreground": "#1f377f"
+			}
+		},
+		{
+			"name": "C#: defaults",
+			"scope": [
+				"entity.name.type.namespace.cs",
+				"punctuation.terminator.statement.cs"
+			],
+			"settings": {
+				"foreground": "#000000"
+			}
+		},
 		
 	]
 }

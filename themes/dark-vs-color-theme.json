@@ -5,20 +5,21 @@
 		"editor.background": "#1e1e1e",
 		"editor.foreground": "#dcdcdc",
 		"focusBorder": "#7160e8",
+		"foreground": "#fafafa",
 		"editor.lineHighlightBackground": "#00000000",
 		"editor.lineHighlightBorder": "#464646",
 		"editorLineNumber.foreground": "#8a8a8a",
 		"editorLineNumber.activeForeground": "#e0e0e0",
-		"editorIndentGuide.background": "#717171",
-		"editorIndentGuide.activeBackground": "#717171",
+		"editorIndentGuide.background1": "#717171",
+		"editorIndentGuide.activeBackground1": "#717171",
 		"editorBracketMatch.background": "#113d6f",
-		"editorBracketMatch.border": "#627892",
-		"editorBracketHighlight.foreground1": "#dcdcdc",
-		"editorBracketHighlight.foreground2": "#dcdcdc",
-		"editorBracketHighlight.foreground3": "#dcdcdc",
-		"editorBracketHighlight.foreground4": "#dcdcdc",
-		"editorBracketHighlight.foreground5": "#dcdcdc",
-		"editorBracketHighlight.foreground6": "#dcdcdc",
+		"editorBracketMatch.border": "#113d6f", //627892
+		// "editorBracketHighlight.foreground1": "#dcdcdc",
+		// "editorBracketHighlight.foreground2": "#dcdcdc",
+		// "editorBracketHighlight.foreground3": "#dcdcdc",
+		// "editorBracketHighlight.foreground4": "#dcdcdc",
+		// "editorBracketHighlight.foreground5": "#dcdcdc",
+		// "editorBracketHighlight.foreground6": "#dcdcdc",
 		"editor.selectionBackground": "#264f78",
 		"editor.inactiveSelectionBackground": "#343434",
 		"editor.selectionHighlightBackground": "#343d47",
@@ -27,6 +28,9 @@
 		"editor.wordHighlightBorder": "#aaaaaa",
 		"editor.foldBackground": "#00000000",
 		"editorGutter.foldingControlForeground": "#e2e2e2",
+		"editorGutter.addedBackground": "#107c10",
+		"editorGutter.modifiedBackground": "#0078d4",
+		"editorGutter.deletedBackground": "#df6262",
 		"editorWidget.background": "#242424",
 		"editorSuggestWidget.background": "#1f1f1f",
 		"editorSuggestWidget.highlightForeground": "#fafafa",
@@ -42,12 +46,21 @@
 		"extensionButton.background": "#dddddd",
 		"extensionButton.prominentForeground": "#000000",
 		"extensionButton.prominentHoverBackground": "#bee6fd",
+		"gitDecoration.addedResourceForeground": "#fafafa",
+		"gitDecoration.untrackedResourceForeground": "#fafafa",
+		"gitDecoration.modifiedResourceForeground": "#fafafa",
+		"gitDecoration.deletedResourceForeground": "#fafafa",
+		"gitDecoration.renamedResourceForeground": "#fafafa",
+		"gitDecoration.stageDeletedResourceForeground": "#fafafa",
+		"gitDecoration.stageModifiedResourceForeground": "#fafafa",
+		"gitDecoration.submoduleResourceForeground": "#fafafa",
 		"input.background": "#1f1f1f",
 		"input.border": "#999999",
 		"list.inactiveSelectionBackground": "#383838",
 		"list.hoverBackground": "#00000000",
 		"list.activeSelectionBackground": "#3d3d3d",
 		"list.focusAndSelectionOutline": "#707070",
+		"list.errorForeground": "#fafafa",
 		"quickInputList.focusBackground": "#3d3d3d",
 		"sideBar.background": "#1f1f1f",
 		"sideBar.border": "#3d3d3d",
@@ -56,13 +69,11 @@
 		"statusBar.noFolderBackground": "#2e2e2e",
 		"statusBar.debuggingBackground": "#2e2e2e",
 		"statusBar.border": "#00000000",
-		"statusBar.foreground": "#fafafa",
 		"statusBarItem.hoverBackground": "#3d3d3d",
 		"editorGroupHeader.tabsBackground": "#1f1f1f",
 		"tab.inactiveBackground": "#2e2e2e",
 		"tab.activeBackground": "#3d3d3d",
 		"tab.activeBorderTop": "#7160e8",
-		"tab.activeForeground": "#fafafa",
 		"tab.inactiveForeground": "#b2b2b2",
 		"tab.hoverForeground": "#fafafa",
 		"tab.border": "#1f1f1f",
@@ -101,16 +112,26 @@
 			}
 		},
 		{
-			"name": "Key, Storage, language constants, delete, null, builtin function",
+			"name": "Keyword, delete, builtin function",
 			"scope": [
 				"keyword",
 				"keyword.operator.instanceof",
 				"variable.language",
-				"storage",
-				"constant.language",
-				"keyword.operator.delete",
-				"constant.language.NULL",
 				"support.function.builtin"
+			],
+			"settings": {
+				"foreground": "#d8a0df"
+			}
+		},
+		{
+			"name": "Storage, language constants",
+			"scope": [
+				"storage",
+				"keyword.other",
+				"keyword.operator.new",
+				"keyword.operator.delete",
+				"keyword.type.cs",
+				"constant.language",
 			],
 			"settings": {
 				"foreground": "#5c9cd6"
@@ -126,6 +147,15 @@
 			}
 		},
 		{
+			"name": "Escape sequence",
+			"scope": [
+				"constant.character.escape"
+			],
+			"settings": {
+				"foreground": "#ffd68f"
+			}
+		},
+		{
 			"name": "Number",
 			"scope": [
 				"constant.numeric"
@@ -135,28 +165,12 @@
 			}
 		},
 		{
-			"name": "Classes, Namespaces",
+			"name": "Classes, Namespaces, T",
 			"scope": [
-				"entity.name.type.class",
-				"entity.name.type.struct",
-				"entity.name.scope-resolution"
+				"entity.name.type"
 			],
 			"settings": {
 				"foreground": "#4ec9b0"
-			}
-		},
-		{
-			"name": "operators",
-			"scope": [
-				"punctuation.definition.directive.cpp",
-				"punctuation.definition.constant",
-				"keyword.operator",
-				"punctuation.definition.keyword",
-				"storage.type.function.arrow",
-				"punctuation.definition.variable"
-			],
-			"settings": {
-				"foreground": "#b4b4b4"
 			}
 		},
 		{
@@ -180,6 +194,44 @@
 			}
 		},
 		{
+			"name": "C++: foreground",
+			"scope": [
+				"source.cpp",
+			],
+			"settings": {
+				"foreground": "#c8c8c8"
+			}
+		},
+		{
+			"name": "C++: String punctuation",
+			"scope": [
+				"punctuation.definition.string.begin.cpp",
+				"punctuation.definition.string.end.cpp",
+			],
+			"settings": {
+				"foreground": "#e8c9bb"
+			}
+		},
+		{
+			"name": "C++: operators",
+			"scope": [
+				"punctuation.definition.constant",
+				"keyword.operator",
+				"punctuation.definition.keyword",
+				"storage.type.function.arrow",
+				"punctuation.definition.variable",
+				"punctuation.terminator.statement.cpp",
+				"punctuation.separator.scope-resolution.cpp",
+				"punctuation.separator.delimiter.comma.cpp",
+				"punctuation.section.block",
+				"punctuation.section.parens",
+				"punctuation.section.parameters"
+			],
+			"settings": {
+				"foreground": "#b4b4b4"
+			}
+		},
+		{
 			"name": "C++: directives",
 			"scope": [
 				"keyword.control.directive",
@@ -189,22 +241,59 @@
 			}
 		},
 		{
-			"name": "C++: function, preprocessor function, constructor",
+			"name": "C++: function, constructor",
 			"scope": [
 				"entity.name.function.definition.cpp",
 				"entity.name.function.call.cpp",
 				"entity.name.function.member.cpp",
-				"entity.name.function.constructor.cpp",
-				"entity.name.function.preprocessor"
+				"entity.name.function.constructor.cpp"
 			],
 			"settings": {
-				"foreground": "#4ec9b0"
+				"foreground": "#dcdcaa"
 			}
 		},
 		{
-			"name": "C++: defaults",
+			"name": "C++: parameter variable",
 			"scope": [
-				"entity.name.type.parameter.cpp"
+				"variable.parameter.cpp",
+			],
+			"settings": {
+				"foreground": "#9a9a9a"
+			}
+		},
+		{
+			"name": "C++: local variable",
+			"scope": [
+				"variable.other.local"
+			],
+			"settings": {
+				"foreground": "#9cdcfe"
+			}
+		},
+		{
+			"name": "C++: attribute",
+			"scope": [
+				"variable.other.property"
+			],
+			"settings": {
+				"foreground": "#dadada"
+			}
+		},
+		{
+			"name": "C++: preprocessor token, NULL, conditional token",
+			"scope": [
+				"meta.preprocessor.macro",
+				"constant.language.NULL",
+				"entity.name.other.preprocessor.macro.predefined"
+			],
+			"settings": {
+				"foreground": "#beb7ff"
+			}
+		},
+		{
+			"name": "C++: preprocessor conditional (#ifndef)",
+			"scope": [
+				"meta.preprocessor.conditional"
 			],
 			"settings": {
 				"foreground": "#dcdcdc"
@@ -353,7 +442,7 @@
 				"punctuation.separator.delimiter.java"
 			],
 			"settings": {
-				"foreground": "#dcdcdc"
+				"foreground": "#c8c8c8"
 			}
 		},
 		{
@@ -362,7 +451,7 @@
 				"entity.name.type.instance.jsdoc"
 			],
 			"settings": {
-				"foreground": "#dcdcdc"
+				"foreground": "#c8c8c8"
 			}
 		},
 		{
@@ -419,9 +508,65 @@
 				"variable.other.normal.shell"
 			],
 			"settings": {
+				"foreground": "#c8c8c8"
+			}
+		},
+		{
+			"name": "C#: functions",
+			"scope": [
+				"entity.name.function.cs"
+			],
+			"settings": {
+				"foreground": "#dcdcaa"
+			}
+		},
+		{
+			"name": "C#: local & parameter variable",
+			"scope": [
+				"entity.name.variable.parameter.cs",
+				"entity.name.variable.local.cs"
+			],
+			"settings": {
+				"foreground": "#9cdcfe"
+			}
+		},
+		// {
+		// 	"name": "C#: Class attributes (variables)",		// temporary fix (wrong color for accessing class attributes)
+		// 	"scope": [
+		// 		"variable.other.readwrite.cs",
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#9cdcfe"
+		// 	}
+		// },
+		{
+			"name": "C#: Object variables (variables)",		// temporary fix (wrong color for static class names e.g "Console")
+			"scope": [
+				"variable.other.object.cs",
+			],
+			"settings": {
+				"foreground": "#9cdcfe"
+			}
+		},
+		{
+			"name": "C#: defaults",
+			"scope": [
+				"entity.name.type.namespace.cs",
+				"punctuation.terminator.statement.cs"
+			],
+			"settings": {
 				"foreground": "#dcdcdc"
 			}
-		}
+		},
+		{
+			"name": "C#: dot",
+			"scope": [
+				"punctuation.accessor.cs",
+			],
+			"settings": {
+				"foreground": "#b4b4b4"
+			}
+		},
 		
 	]
 }
